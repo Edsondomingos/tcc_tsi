@@ -21,12 +21,12 @@ Após instalar os softwares necessários no computador. No terminal/CMD, entre n
 npm i
 ```
 
-## Executar o projeto
+## Para executar o projeto
 ```
 npm start
 ```
 
-## No navegador digte na url
+## No navegador digite na url
 ```
 localhost:3000
 ```
