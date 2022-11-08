@@ -8,7 +8,7 @@ Repositório do meu tcc do curso de Sistemas para Internet no IFRN Canguaretama
 </p>
 
 ## Visão do projeto  
-[!protótipo figma](https://www.figma.com/file/dklynEy9dD9lYNV1nieF1s/tcc?node-id=101%3A2)  
+[protótipo do projeto](https://www.figma.com/file/dklynEy9dD9lYNV1nieF1s/tcc?node-id=101%3A2)  
 
 ## Softwares necessários  
 - NODEjs
