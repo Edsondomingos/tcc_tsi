@@ -8,11 +8,11 @@ Repositório do meu tcc do curso de Sistemas para Internet no IFRN Canguaretama
 </p>
 
 ## Visão do projeto  
-[protótipo do projeto](https://www.figma.com/file/dklynEy9dD9lYNV1nieF1s/tcc?node-id=101%3A2)  
+[Protótipo do projeto](https://www.figma.com/file/dklynEy9dD9lYNV1nieF1s/tcc?node-id=101%3A2)
 
 ## Softwares necessários  
-- NODEjs
-- Editor de codigo(Utilizei Visual Studio code)  
+- [NODEjs](https://nodejs.org/en/)
+- [VSCode](https://code.visualstudio.com/Download)
 - Navegador  
 
 Após instalar os softwares necessários no computador. No terminal/CMD, entre no diretório do projeto baixado e ...
