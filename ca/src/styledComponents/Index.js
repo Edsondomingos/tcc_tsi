@@ -1,3 +1,4 @@
+// import styled from "styled-components/native";
 import styled from "styled-components/native";
 
 export const Container = styled.View`
@@ -6,12 +7,12 @@ export const Container = styled.View`
     flex-direction: column
 `;
 
-export const Title = styled.View`
+export const Title = styled.Text`
     font-size: 50px;
 `;
 
-export const Text = styled.View`
-    
+export const TextNormal = styled.text`
+    font-size: 30px;
 `;
 
 export const Btn = styled.TouchableHighlight`

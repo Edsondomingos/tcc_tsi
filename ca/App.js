@@ -1,20 +1,22 @@
-import { Container } from './src/styledComponents/Index'
-import { NavigationContainer } from '@react-navigation/native'
-import { createNativeStackNavigator } from '@react-navigation/native-stack';
-import Login from './src/components/Login'
+import { Text } from 'react-native';
 import Index from './src/components/Index'
-import { Text } from 'react-native'
+import { TextNormal } from './src/styledComponents/Index';
+// import Login from './src/components/Login'
+// import { NavigationContainer } from '@react-navigation/native'
+// import { createNativeStackNavigator } from '@react-navigation/native-stack';
 
-const Stack = createNativeStackNavigator()
+// const Stack = createNativeStackNavigator()
 
 export default () => {
   return (
-    /* <NavigationContainer>
-    //   <Stack.Navigator initial='Index' screenOptions={{ headerShown: true}}>
-    //     <Stack.Screen name='index' component={Index} />
-    //   </Stack.Navigator>
-    // </NavigationContainer> */
-    <Text>Teste</Text>
-  );
-}
-
+      <TextNormal>Teste</TextNormal>
+    
+    )
+  }
+  
+  
+{/* <NavigationContainer>
+       <Stack.Navigator initial='Index' screenOptions={{ headerShown: true}}>
+         <Stack.Screen name='Index' component={Index} />
+       </Stack.Navigator>
+    </NavigationContainer> */}
