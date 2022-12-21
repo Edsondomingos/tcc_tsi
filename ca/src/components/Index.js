@@ -1,17 +1,19 @@
-// import { Container, Btn, TextBtn } from "../styledComponents/Index"
+import { Title } from "../styledComponents/Index"
 import { View, Text } from "react-native"
 
-export default function index() {
+export default () => {
     return (
         <View>
-            <Text>Tela Index de components</Text>
+            <View>
+                <Text>CA</Text>
+                <Text>Centro de Autossuficiência!</Text>
+            </View>
+            <View>
+                <Text>Login</Text>
+            </View>
+            <Title>texto styled components</Title>
         </View>
     )
 }
     
     
-// <Container>
-//     <Btn>
-//         <TextBtn>Tela Index de components</TextBtn>
-//     </Btn>
-// </Container>

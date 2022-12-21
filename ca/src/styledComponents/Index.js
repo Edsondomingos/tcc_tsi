@@ -1,17 +1,15 @@
-// import styled from "styled-components/native";
 import styled from "styled-components/native";
 
 export const Container = styled.View`
     display: flex;
-    flex: 1;
     flex-direction: column
 `;
 
-export const Title = styled.Text`
+export const Title = styled.text`
     font-size: 50px;
 `;
 
-export const TextNormal = styled.text`
+export const TextNormal = styled.Text`
     font-size: 30px;
 `;
 
