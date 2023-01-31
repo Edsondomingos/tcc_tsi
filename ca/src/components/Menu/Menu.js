@@ -1,14 +1,27 @@
-import { ContainerRow, Buttons } from './style';
+import { ContainerRow, Btn, Buttons } from './style';
 
 export default (props) => {
   return (
-    <ContainerRow onPress={() => props.navigation.navigate('Index')}>
-      <Buttons
-        onPress={() => navigation.navigate('Vagas')}
-        source={require('../../../imgs/homeBranco.png')}
-      />
-      <Buttons source={require('../../../imgs/postBranco.png')} />
-      <Buttons source={require('../../../imgs/perfilBranco.png')} />
+    <ContainerRow>
+      <Btn onPress={() => props.navigation.navigate('Vagas')}>
+        <Buttons
+          source={require('../../../imgs/homeBranco.png')}
+        />
+      </Btn>
+
+      <Btn 
+        onPress={() => props.navigation.navigate('Vaga')}>
+        <Buttons
+         source={require('../../../imgs/postBranco.png')}
+        />
+      </Btn>
+
+      <Btn  
+          onPress={() => props.navigation.navigate('Perfil')}>
+        <Buttons
+          source={require('../../../imgs/perfilBranco.png')}
+        />
+      </Btn>
     </ContainerRow>
   );
 };

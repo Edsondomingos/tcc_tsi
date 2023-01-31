@@ -13,7 +13,7 @@ export const ContainerRow = styled.View`
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: flex-start;
+    justify-content: space-evenly;
     padding: 10px;
 `;
 

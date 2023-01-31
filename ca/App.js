@@ -17,10 +17,10 @@ export default () => {
   return (
     <NavigationContainer>
       <Stack.Navigator initial="Index" screenOptions={{ headerShown: false }}>
-        <Stack.Screen name="Menu" component={Menu} />
-        <Stack.Screen name="PerfilEmpresa" component={PerfilEmpresa} />
         <Stack.Screen name="Perfil" component={Perfil} />
+        <Stack.Screen name="Menu" component={Menu} />
         <Stack.Screen name="AddVaga" component={AddVaga} />
+        <Stack.Screen name="PerfilEmpresa" component={PerfilEmpresa} />
         <Stack.Screen name="Vagas" component={Vagas} />
         <Stack.Screen name="Vaga" component={Vaga} />
         <Stack.Screen name="PostarVaga" component={PostarVaga} />
