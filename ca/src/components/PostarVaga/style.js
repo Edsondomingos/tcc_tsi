@@ -2,41 +2,34 @@ import styled from "styled-components/native";
 
 export const Container1 = styled.View`
     flex: 1;
+    background: #fff;    
+    // flex-direction: column;
+    // justify-content: center;
+    // align-items: center;
+`;
+
+export const Container2 = styled.View`
+    flex: 2;
     background: #fff;
-`;
-
-export const Top = styled.View`
-    flex: 1;
-    background: #086E7C;
-    border-bottom-left-radius: 50px;
-    border-bottom-right-radius: 50px;
-    justify-content: center;
-    align-items: center
-`;
-
-export const Down = styled.View`
-    flex: 1;
-    background: #086E7C;
-    border-top-left-radius: 50px;
-    border-top-right-radius: 50px;
-    justify-content: center;
-    align-items: center
+    
 `;
 
 export const Container3 = styled.View`
     flex: 3;
-    background: #fff;
+    justify-content: center;
+    align-items: center;
 `;
 
 export const ContainerRow = styled.View`
     display: flex;
     flex-direction: row;
     align-items: center;
+    margin-bottom: 30px;
 `;
 
 export const SmallContainer = styled.View`
     display: flex;
-    flex: 10;
+    flex: 1;
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -58,8 +51,7 @@ export const TitlePage = styled.Text`
     font-size: 50px;
     color: #086E7C;
     font-weight: bold;
-    text-shadow: 3px 3px 3px #000;
-    width: 100px;
+    text-shadow: 2px 2px 2px #000;
 `;
 
 export const TextNormal = styled.Text`
@@ -77,6 +69,7 @@ export const Btn = styled.TouchableHighlight`
     border-radius: 7px;
     box-shadow: 1px 1px 3px #000;
     padding: 2px;
+    margin: auto;
 `;
 
 export const SmallBtn = styled.TouchableHighlight`
@@ -97,8 +90,8 @@ export const SmallBtn = styled.TouchableHighlight`
 export const TextBtn = styled.Text`
   font-family: 'Arial';
   font-weight: 700;
-  font-size: 25px;
-  color: #fff;
+  font-size: 100%;
+  color: #FFFFFF;
 `;
 
 export const Inputs = styled.TextInput`
@@ -112,7 +105,7 @@ export const Inputs = styled.TextInput`
 `;
 
 export const TextArea = styled.TextInput`
-  width: 250px;
+  width: 90vw;
   height: 300px;
   border: 1px solid #757575;
   border-radius: 7px;
@@ -122,8 +115,8 @@ export const TextArea = styled.TextInput`
 `;
 
 export const Next = styled.TouchableHighlight`
-  width: 70px;
-  height: 70px;
+  width: 50px;
+  height: 50px;
   border-radius: 50%;
   background: #086E7C;
   display: flex;
@@ -135,15 +128,18 @@ export const Next = styled.TouchableHighlight`
 export const Selects = styled.View`
   display: flex;
   align-items: center;
+  justify-content: space-around;
   flex-direction: row;
-  width: 75%;
+  width: 50%;
+  
 `;
 
 export const Photo = styled.Image`
   width: 200px;
   height: 200px;
   background: #000;
-  border-radius: 50%;
+  border-radius: 10px;
+  margin: auto;
 `;
 
 export const TitleAreas = styled.Text`
@@ -157,7 +153,9 @@ export const Lists = styled.FlatList`
 `;
 
 export const Scrolls = styled.ScrollView`
-  border-top: 1px solid #000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 `;
 
 export const Plus = styled.Image`

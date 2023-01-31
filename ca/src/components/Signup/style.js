@@ -3,40 +3,21 @@ import styled from "styled-components/native";
 export const Container1 = styled.View`
     flex: 1;
     background: #fff;
-`;
-
-export const Top = styled.View`
-    flex: 1;
-    background: #086E7C;
-    border-bottom-left-radius: 50px;
-    border-bottom-right-radius: 50px;
+    display: flex;
+    flex-direction: column;
     justify-content: center;
-    align-items: center
-`;
-
-export const Down = styled.View`
-    flex: 1;
-    background: #086E7C;
-    border-top-left-radius: 50px;
-    border-top-right-radius: 50px;
-    justify-content: center;
-    align-items: center
+    align-items: center;
 `;
 
 export const Container3 = styled.View`
     flex: 3;
     background: #fff;
-`;
-
-export const ContainerRow = styled.View`
-    display: flex;
-    flex-direction: row;
-    align-items: center;
+    
 `;
 
 export const SmallContainer = styled.View`
     display: flex;
-    flex: 10;
+    flex: 1;
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -58,8 +39,7 @@ export const TitlePage = styled.Text`
     font-size: 50px;
     color: #086E7C;
     font-weight: bold;
-    text-shadow: 3px 3px 3px #000;
-    width: 100px;
+    text-shadow: 2px 2px 2px #000;
 `;
 
 export const TextNormal = styled.Text`
@@ -77,6 +57,7 @@ export const Btn = styled.TouchableHighlight`
     border-radius: 7px;
     box-shadow: 1px 1px 3px #000;
     padding: 2px;
+    margin-bottom: 50px
 `;
 
 export const SmallBtn = styled.TouchableHighlight`
@@ -97,8 +78,8 @@ export const SmallBtn = styled.TouchableHighlight`
 export const TextBtn = styled.Text`
   font-family: 'Arial';
   font-weight: 700;
-  font-size: 25px;
-  color: #fff;
+  font-size: 100%;
+  color: #FFFFFF;
 `;
 
 export const Inputs = styled.TextInput`
@@ -122,8 +103,8 @@ export const TextArea = styled.TextInput`
 `;
 
 export const Next = styled.TouchableHighlight`
-  width: 70px;
-  height: 70px;
+  width: 50px;
+  height: 50px;
   border-radius: 50%;
   background: #086E7C;
   display: flex;
@@ -137,6 +118,7 @@ export const Selects = styled.View`
   align-items: center;
   flex-direction: row;
   width: 75%;
+  margin: 10px 0;
 `;
 
 export const Photo = styled.Image`

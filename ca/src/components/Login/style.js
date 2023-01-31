@@ -5,18 +5,8 @@ export const Container1 = styled.View`
     background: #fff;
 `;
 
-export const Top = styled.View`
+export const Container2 = styled.View`
     flex: 1;
-    background: #086E7C;
-    border-bottom-left-radius: 50px;
-    border-bottom-right-radius: 50px;
-    justify-content: center;
-    align-items: center
-`;
-
-export const Down = styled.View`
-    flex: 1;
-    background: #086E7C;
     border-top-left-radius: 50px;
     border-top-right-radius: 50px;
     justify-content: center;
@@ -36,7 +26,7 @@ export const ContainerRow = styled.View`
 
 export const SmallContainer = styled.View`
     display: flex;
-    flex: 10;
+    flex: 5;
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -55,15 +45,21 @@ export const SubTitle = styled.Text`
 `;
 
 export const TitlePage = styled.Text`
-    font-size: 50px;
+    font-size: 40px;
     color: #086E7C;
     font-weight: bold;
     text-shadow: 3px 3px 3px #000;
-    width: 100px;
+    width: 150px;
 `;
 
 export const TextNormal = styled.Text`
     font-size: 16px;
+`;
+
+export const TextNormal2 = styled.Text`
+    font-size: 18px;
+    font-weight: bold
+    text-decoration: underline;
 `;
 
 export const Btn = styled.TouchableHighlight`
@@ -77,6 +73,7 @@ export const Btn = styled.TouchableHighlight`
     border-radius: 7px;
     box-shadow: 1px 1px 3px #000;
     padding: 2px;
+    margin-top: 20px;
 `;
 
 export const SmallBtn = styled.TouchableHighlight`
@@ -97,8 +94,8 @@ export const SmallBtn = styled.TouchableHighlight`
 export const TextBtn = styled.Text`
   font-family: 'Arial';
   font-weight: 700;
-  font-size: 25px;
-  color: #fff;
+  font-size: 22px;
+  color: #FFFFFF;
 `;
 
 export const Inputs = styled.TextInput`
@@ -107,7 +104,7 @@ export const Inputs = styled.TextInput`
   border: 1px solid #757575;
   border-radius: 7px;
   padding: 20px;
-  margin: 10px 0;
+  margin: 15px 0;
   color: #aaa;
 `;
 
@@ -125,7 +122,7 @@ export const Next = styled.TouchableHighlight`
   width: 70px;
   height: 70px;
   border-radius: 50%;
-  background: #086E7C;
+  background: #515151;
   display: flex;
   justify-content: center;
   align-items: center;
