@@ -1,5 +1,6 @@
 import {
   Container1,
+  Container,
   Container4,
   ContainerRow,
   SmallContainer,
@@ -12,6 +13,7 @@ import {
   TitleAreas,
   SmallLogoImpresa
 } from './style';
+import Menu from '../Menu/Menu'
 
 export default (props) => {
   const vaga = 'Vaga'; //(props.route.params.vaga) ? props.route.params.vaga : 'Teste';
@@ -25,7 +27,7 @@ export default (props) => {
   return (
     <Container1>
     
-      <Container1>
+      <Container>
         <ContainerRow>
           <SmallLogoImpresa source={require('../../../imgs/plus.png')}/>
           <Title>Nome Empresa</Title>
@@ -34,7 +36,7 @@ export default (props) => {
         <SubTitle>{vaga}</SubTitle>
         <TextNormal>+ Contratação: {tipo}</TextNormal>
         <TextNormal>+ Remuneração: {remuneracao}</TextNormal>
-      </Container1>
+      </Container>
 
       <Container4>
         <Scrolls>
@@ -57,6 +59,7 @@ export default (props) => {
             <TextBtn>Candidatar-se</TextBtn>
           </Btn>
         </SmallContainer>
+        <Menu />
     </Container1>
   );
 };

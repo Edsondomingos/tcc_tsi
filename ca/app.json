@@ -24,10 +24,16 @@
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#FFFFFF"
-      }
+      },
+      "package": "com.edson.domingos.snack9213c9565a444228ab0b5155b034ee65"
     },
     "web": {
       "favicon": "./assets/favicon.png"
+    },
+    "extra": {
+      "eas": {
+        "projectId": "e1d509e0-59c6-4d85-8b44-929b72eee6d4"
+      }
     }
   }
 }

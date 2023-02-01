@@ -5,6 +5,10 @@ export const Container1 = styled.View`
     background: #fff;
 `;
 
+export const Container = styled.View`
+    background: #fff;
+`;
+
 
 export const Container4 = styled.View`
     flex: 4;
