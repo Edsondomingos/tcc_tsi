@@ -1,0 +1,6 @@
+Fazer casos de uso
+
+Botao cadidatar-se, em vagas, precisa tirar, por enquanto.
+Ver addVaga, o que aparece para o usuario comum na vaga.
+
+Ver numeração das imagens
