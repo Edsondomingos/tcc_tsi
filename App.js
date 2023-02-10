@@ -15,12 +15,12 @@ export default () => {
   return (
     <NavigationContainer>
       <Stack.Navigator initial="Index" screenOptions={{ headerShown: false }}>
+        <Stack.Screen name="Signup" component={Signup} />     
         <Stack.Screen name="Vagas" component={Vagas} /> 
         <Stack.Screen name="AddVaga" component={AddVaga} />
         <Stack.Screen name="Admin" component={Admin} />
         <Stack.Screen name="Menu" component={Menu} />
         <Stack.Screen name="Vaga" component={Vaga} />
-        <Stack.Screen name="Signup" component={Signup} />        
         <Stack.Screen name="Login" component={Login} />
       </Stack.Navigator>
     </NavigationContainer>

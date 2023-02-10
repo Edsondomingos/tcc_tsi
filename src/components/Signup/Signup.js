@@ -15,6 +15,19 @@ import {
 import { useState } from 'react';
 import { RadioButton } from 'react-native-paper';
 import CheckBox from 'expo-checkbox';
+import { doc, setDoc } from "firebase/firestore"
+
+// Add a new document in collection "cities"
+await setDoc(doc(db, "cities", "LA"), {
+  name: "Los Angeles",
+  state: "CA",
+  country: "USA",
+})
+await setDoc(doc(db, "cities"), {
+  name: "Los Angeles",
+  email: "",
+  senha: "",
+})
 
 export default (props) => {
   const [nome, setNome] = useState('');

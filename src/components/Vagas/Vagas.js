@@ -16,7 +16,6 @@ import {
   Logar,
 } from './style';
 import { useState } from 'react';
-import Menu from '../Menu/Menu';
 
 const conteudo = [
   {
