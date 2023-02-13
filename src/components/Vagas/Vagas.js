@@ -16,6 +16,7 @@ import {
   Logar,
 } from './style';
 import { useState } from 'react';
+import { doc, getDoc } from "firebase/firestore"
 
 const conteudo = [
   {
@@ -68,6 +69,19 @@ const conteudo = [
   },
 ];
 
+let dados
+const docRef = doc(db, "vagas", "l1MHOso9qt9oavYxvDii");
+const docSnap = await getDoc(docRef);
+
+if (docSnap.exists()) {
+  console.log("Document data:", docSnap.data());
+  dados = docSnap.data()
+} else {
+  // doc.data() will be undefined in this case
+  console.log("No such document!");
+  dados = "NADA"
+}
+
 function procura(){
   // if(conteudo.includes(palavra)){
     return 
@@ -99,7 +113,7 @@ export default (props) => {
         
       </Container2>
 
-      
+      <TextNormal>{dados}</TextNormal>
       <Container3>
         <Scrolls>
           <Lists
