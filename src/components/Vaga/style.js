@@ -96,7 +96,7 @@ export const SmallLogoImpresa = styled.Image`
 
 export const Logar = styled.Image`
     width: 50px;
-    hight: 30px;
+    height: 50px;
     border: 1px solid #000;
     border-radius: 50%;
     background: #000;

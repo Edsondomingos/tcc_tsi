@@ -16,9 +16,11 @@ import {
   Logar,
 } from './style';
 import { useState } from 'react';
-import { doc, getDoc } from "firebase/firestore"
+import { app } from '../../components/config/firebaseconfig'
+import { getDocs, getFirestore, collection } from "firebase/firestore"
+const db = getFirestore(app)
 
-const conteudo = [
+let conteudo = [
   {
     vaga: 'Desenvolvedor mobile jr',
     tipo: 'CLT',
@@ -69,37 +71,39 @@ const conteudo = [
   },
 ];
 
-let dados
-const docRef = doc(db, "vagas", "l1MHOso9qt9oavYxvDii");
-const docSnap = await getDoc(docRef);
-
-if (docSnap.exists()) {
-  console.log("Document data:", docSnap.data());
-  dados = docSnap.data()
-} else {
-  // doc.data() will be undefined in this case
-  console.log("No such document!");
-  dados = "NADA"
+async function getVagas(db){
+  const vagas = collection(db, 'vagas')
+  const vagaSnapchot = await getDocs(vagas)
+  const vagaList = vagaSnapchot.docs.map(doc => doc.data())
+  console.log(vagaList, typeof vagaList)
+  console.log(vagaList[0].teste, typeof vagaList[0].teste)
+  console.log(Object.keys(vagaList), typeof Object.keys(vagaList))
+  // dados = vagaList
+  return vagaList
 }
 
-function procura(){
-  // if(conteudo.includes(palavra)){
-    return 
-  // }
-}
+// conteudo = getVagas(db)
+
+// let dados = getVagas(db)
+// function procura(){
+//   // if(conteudo.includes(palavra)){
+//     return 
+//   // }
+// }
+
 
 export default (props) => {
-  const [vagas, setVagas] = useState();
+  const [vagas, setVagas] = useState(getVagas(db));
 
   return (
     <Container1>
       <Container2>
-      <Btn2
+        <Btn2
           onPress={() => props.navigation.navigate('Login')}>
-        <Logar 
-          source={require('../../../imgs/perfilBranco.png')} 
-        />
-      </Btn2>
+          <Logar
+            source={require('../../../imgs/perfilBranco.png')}
+          />
+        </Btn2>
         {/*<SmallContainer>
           <Inputs
             value={vagas}
@@ -110,10 +114,9 @@ export default (props) => {
             <TextBtn>Procurar</TextBtn>
           </Btn>
         </SmallContainer>*/}
-        
+
       </Container2>
 
-      <TextNormal>{dados}</TextNormal>
       <Container3>
         <Scrolls>
           <Lists
@@ -129,6 +132,7 @@ export default (props) => {
                     })
                   }>
                   <SubTitle>{item.vaga}</SubTitle>
+                  <TextNormal>{typeof vagas}</TextNormal>
                   <TextNormal>+ Contratação: {item.tipo}</TextNormal>
                   <TextNormal>+ Salário: {item.remuneracao}</TextNormal>
                   <TextNormal>+ Empresa: {'Empresa'}</TextNormal>

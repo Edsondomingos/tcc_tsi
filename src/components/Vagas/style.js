@@ -11,6 +11,7 @@ export const Container2 = styled.View`
     display: flex;
     align-itens: flex-end;
     justify-content: center;
+    // height: 10px;
 `;
 
 export const Container3 = styled.View`
@@ -101,7 +102,7 @@ export const SmallLogoImpresa = styled.Image`
 
 export const Logar = styled.Image`
     width: 50px;
-    hight: 30px;
+    height: 50px;
     border: 1px solid #000;
     border-radius: 50%;
     background: #000;
