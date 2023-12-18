@@ -1,21 +1,5 @@
-import {
-  Container1,
-  Container2,
-  Container3,
-  ContainerVaga,
-  SmallContainer,
-  ContainerRow,
-  SubTitle,
-  TextNormal,
-  Btn,
-  Btn2,
-  TextBtn,
-  Inputs,
-  Lists,
-  Scrolls,
-  Logar,
-} from './style'
-import { useState } from 'react'
+import { View, Text, ScrollView, TouchableHighlight } from 'react-native'
+import Menu from './Screens/Menu/Menu'
 
 let conteudo = [
   {
@@ -70,36 +54,36 @@ let conteudo = [
 
 export default function App() {
   return (
-    <Container1>
-      <Container2>
-        <Btn2>
-          <Logar
-            source={require('./imgs/perfilBranco.png')}
-          />
-        </Btn2>
-
-      </Container2>
-
-      <Container3>
-        <Scrolls>
-          <Lists
-            data={conteudo}
-            renderItem={({ item }) => {
-              return (
-                <ContainerVaga>
-                  <SubTitle>SubTitle</SubTitle>
-                  <TextNormal>Vaga</TextNormal>
-                  <TextNormal>Tipo</TextNormal>
-                  <TextNormal>+ Salário: </TextNormal>
-                  <TextNormal>+ Empresa:</TextNormal>
-                </ContainerVaga>
-              );
-            }}
-          />
-        </Scrolls>
-      </Container3>
-    </Container1>
-  );
+    <View style={{flex: 1}}>
+      <ScrollView style={{height: '90%'}}>
+        <Text style={{
+          fontSize: 50, textAlign: 'center'
+        }}>        
+          CA
+        </Text>
+        {
+          conteudo.map((valor,index) => {
+            return (
+              <TouchableHighlight key={index}
+                onPress={() => console.log()}
+                style={{borderLeftWidth: 1, borderLeftColor: '#000', marginLeft: 20,
+                marginVertical: 10, padding: 5, 
+              }}
+              >
+                <View>
+                  <Text style={{fontSize: 22}}>{valor.vaga}</Text>
+                  <Text>{valor.tipo}</Text>
+                  <Text>{valor.remuneracao}</Text>
+                  <Text>{valor.requisitos}</Text>
+                </View>
+              </TouchableHighlight>
+            )
+          })
+        }
+      </ScrollView>
+      <Menu />
+    </View>
+  )
 }
 
 
