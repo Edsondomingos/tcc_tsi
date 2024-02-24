@@ -1,4 +1,4 @@
-import { View, Text, TouchableHighlight, Image } from 'react-native'
+import { View, Text, TouchableOpacity, Image } from 'react-native'
 import { useRouter } from 'expo-router'
 
 
@@ -11,40 +11,40 @@ export default function Menu() {
       backgroundColor: '#086E7C', display: 'flex', flexDirection: 'row',
       justifyContent: 'space-between', alignItems: 'center', width: '100%', height: '7%',
       borderTopRadius: 100,
-      }}>
-      <TouchableHighlight
+    }}>
+      <TouchableOpacity
         onPress={() => router.push({
           href: ''
         })}
       >
-        <Image 
+        <Image
           source={require('../../imgs/homeBranco.png')}
           style={{ width: 50, height: 50 }}
           resizeMode='contain'
         />
-      </TouchableHighlight>
-      <TouchableHighlight
+      </TouchableOpacity>
+      <TouchableOpacity
         onPress={() => router.push({
           href: ''
         })}
       >
-        <Image 
+        <Image
           source={require('../../imgs/postBranco.png')}
           style={{ width: 50, height: 50 }}
           resizeMode='contain'
         />
-      </TouchableHighlight>
-      <TouchableHighlight
+      </TouchableOpacity>
+      <TouchableOpacity
         onPress={() => router.push({
-          href: ''
+          pathname: '/screens/Perfil'
         })}
       >
-        <Image 
+        <Image
           source={require('../../imgs/perfilBranco.png')}
           style={{ width: 50, height: 50 }}
           resizeMode='contain'
         />
-      </TouchableHighlight>
+      </TouchableOpacity>
     </View>
   )
 }

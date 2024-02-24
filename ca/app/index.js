@@ -1,5 +1,5 @@
 import { View, Text, ScrollView, TouchableHighlight } from 'react-native'
-import Menu from './Screens/Menu/Menu'
+import Menu from './components/Menu'
 
 let conteudo = [
   {
@@ -57,7 +57,7 @@ export default function App() {
     <View style={{flex: 1}}>
       <ScrollView style={{height: '90%'}}>
         <Text style={{
-          fontSize: 50, textAlign: 'center'
+          fontSize: 50, textAlign: 'center', fontWeight: 'bold', color: '#086E7C'
         }}>        
           CA
         </Text>
