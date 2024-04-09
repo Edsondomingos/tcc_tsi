@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CA</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            background: #eee;
+        }
+        form {
+            background: #fff;
+            padding: 10px;
+            border-radius: 10px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            /* align-items: center; */
+        }
+        h1 {
+            font-size: 40px;
+            color: #086E7C;
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: 800;
+            text-align: center;
+        }
+        input {
+            margin: 7px 0;
+            border-radius: 5px;
+            padding: 10px;
+            /* width: 90%; */
+        }
+        input[type="radio"], input[type="checkbox"] {
+            margin: 0 5px;
+        }
+        button {
+            background: #086E7C;
+            color: #ffffff;
+            width: 90%;
+            height: 50px;
+            border-radius: 10px;
+            border: none;
+            font-size: 22px;
+            font-weight: bold;
+            margin: auto;
+        }
+    </style>
+<body>
+    <form action="">
+        <h1>CRIAR CONTA</h1>
+        <h4>Já tem uma conta? <a href="login.html">Click aqui</a></h4>
+        <p>
+            <input type="radio" name="tipo" id="empresa"><label for="empresa">Empresa</label>
+            <input type="radio" name="tipo" id="colaborador"><label for="colaborador">Colaborador</label>
+        </p>
+        <input type="text" name="" id="" placeholder="Nome completo" ><br>
+        <input type="text" name="" id="" placeholder="Crie uma Senha" ><br>
+        <input type="date" name="" id="" placeholder="" ><br>
+        <input type="text" name="" id="" placeholder="Cep" ><br>
+        <input type="text" name="" id="" placeholder="Rua/Av?travessa" ><br>
+        <input type="number" name="" id="" placeholder="Numero da residencia" ><br>
+        <input type="text" name="" id="" placeholder="Bairro" ><br>
+        <input type="text" name="" id="" placeholder="Cidade" ><br>
+        <input type="text" name="" id="" placeholder="Estado" ><br>
+        <input type="email" name="" id="" placeholder="email" ><br>
+        <input type="text" name="" id="" placeholder="Rede Social" ><br>
+        <input type="text" name="" id="" placeholder="Numero contato" ><br>
+        <input type="text" name="" id="" placeholder="Rede Social" ><br>
+        <p>
+            <input type="checkbox" name="" id="" ><label for="casado">Casado</label>
+        </p>
+        <p>
+            <input type="checkbox" name="" id="filhos" ><label for="filhos">Filhos   </label><input type="number" placeholder="quantos?">
+        </p>
+        <p>
+            <input type="checkbox" required><label for="termos">Ao criar a conta, concordo com todos os termos de uso.</label>
+        </p>
+        <button type="submit">Criar Conta</button>
+    </form>
+
+
+</body>
+
+</html>
