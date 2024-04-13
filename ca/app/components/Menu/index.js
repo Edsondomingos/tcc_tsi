@@ -14,7 +14,7 @@ export default function Menu() {
     }}>
       <TouchableOpacity
         onPress={() => router.push({
-          href: ''
+          href: '/index'
         })}
       >
         <Image

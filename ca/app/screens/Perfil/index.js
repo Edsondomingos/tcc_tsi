@@ -1,8 +1,31 @@
-import { View, Text, Image, ScrollView } from 'react-native'
+import { useState, useEffect } from 'react'
+import { View, Text, Image, ScrollView, Modal } from 'react-native'
 import Style from './Style'
 import Menu from '../../components/Menu'
+import axios from 'axios'
+import AsyncStorage from '@react-native-async-storage/async-storage'
+import { WebView } from 'react-native-webview'
 
 export default Perfil = () => {
+
+    const [modalSignup, setModalSignup] = useState(false)
+
+    useEffect(() => {
+        const statusLogin = async () => {
+            try {
+                const dadosAsync = JSON.parse(await AsyncStorage.getItem('statusLogin'))
+                if (dadosAsync.length == 0 || dadosAsync === null) {
+                    setModalSignup(true)
+                }
+                console.log(modalSignup,dadosAsync.length)
+            } catch (e) {
+                console.log(e)
+            }
+        }
+
+        statusLogin()
+    }, [])
+
     return (
         <View style={Style.container}>
             <ScrollView>
@@ -30,6 +53,18 @@ export default Perfil = () => {
                 <View>
                     <Text style={Style.titulos}>Pitch</Text>
                 </View>
+
+                <Modal
+                    visible={modalSignup} transparent={false} animationType='slide' onRequestClose={() => setModalSignup(!modalSignup)}
+                >
+                    {/* <BtnFecharModal onPress={() => setModalSignup(!modalSignup)} /> */}
+                    <View style={{ flex: 1, width: '100%', height: '100%' }}>
+                        <WebView
+                            source={{ uri: 'https://acheitudo.online/ca/signup.php' }}
+                        />
+                    </View>
+                </Modal>
+
             </ScrollView>
             <Menu />
         </View>
