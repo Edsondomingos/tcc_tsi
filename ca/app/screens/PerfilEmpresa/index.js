@@ -50,7 +50,9 @@ export default Perfil = () => {
                         <Text style={Style.user}>Endereço completo</Text>
                         <Text style={Style.user}>Redes Sociais:</Text>
                         <Text style={Style.user}>linkedin</Text>
-                        <Text style={{borderWidth: 1, borderBlockColor: '#000', width: 100, textAlign: 'center'}}>Editar perfil</Text>
+                        <TouchableOpacity>
+                            <Text style={{borderWidth: 1, borderBlockColor: '#000', width: 100, textAlign: 'center'}}>Editar perfil</Text>
+                        </TouchableOpacity>
                     </View>
                 </View>
 

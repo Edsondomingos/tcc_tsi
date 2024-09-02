@@ -52,16 +52,16 @@ export default function App() {
 
   const [vagas, setVagas] = useState(null)
 
-  useEffect(() => {
-    const vai = async () => {
-      await router.push({
-        pathname: "/screens/PerfilEmpresa",
-      })
-    }
+  // useEffect(() => {
+  //   const vai = async () => {
+  //     await router.push({
+  //       pathname: "/screens/PerfilEmpresa",
+  //     })
+  //   }
 
-    vai()
+  //   vai()
     
-  })
+  // })
 
 
   // Pega vagas disponiveis na API

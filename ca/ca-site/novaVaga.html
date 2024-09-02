@@ -28,7 +28,7 @@
             margin: 7px 0;
             border-radius: 5px;
             padding: 10px;
-            /* width: 90%; */
+            width: 90%;
         }
         input[type="checkbox"] {
             margin: 0 5px;
@@ -48,8 +48,9 @@
 </head>
 <body>
 
-    <form action="" method="post">
+    <form action="" method="post" enctype="multipart/form-data">
         <h1>Nova vaga de emprego</h1>
+        
         <fieldset>
             <legend>Sobre</legend>
             <p>
@@ -82,6 +83,14 @@
             <p>
                 <label for="">Benefícios</label><br>
                 <textarea name="" id="" rows="10" cols="50"></textarea>
+            </p>
+        </fieldset>
+        <fieldset>
+            <legend>Imagem</legend>
+            <p>
+                <label for="Foto da vaga">Imagem da vaga</label><br>
+                <input type="file" name="" id=""><br>
+                <b>Caso a vaga esteja no banner</b>
             </p>
         </fieldset>
         <button type="submit">Acrescentar</button>
