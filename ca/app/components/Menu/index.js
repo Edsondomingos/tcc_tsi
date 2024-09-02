@@ -1,4 +1,4 @@
-import { View, Text, TouchableOpacity, Image } from 'react-native'
+import { View, TouchableOpacity, Image } from 'react-native'
 import { useRouter } from 'expo-router'
 
 
@@ -9,12 +9,12 @@ export default function Menu() {
   return (
     <View style={{
       backgroundColor: '#086E7C', display: 'flex', flexDirection: 'row',
-      justifyContent: 'space-between', alignItems: 'center', width: '100%', height: '7%',
+      justifyContent: 'space-around', alignItems: 'center', width: '100%', height: '7%',
       borderTopRadius: 100,
     }}>
       <TouchableOpacity
         onPress={() => router.push({
-          href: '/index'
+          pathname: '/'
         })}
       >
         <Image
@@ -25,7 +25,7 @@ export default function Menu() {
       </TouchableOpacity>
       <TouchableOpacity
         onPress={() => router.push({
-          href: ''
+          pathname: '/screens/Inscricoes'
         })}
       >
         <Image
@@ -36,7 +36,7 @@ export default function Menu() {
       </TouchableOpacity>
       <TouchableOpacity
         onPress={() => router.push({
-          pathname: '/screens/Perfil'
+          pathname: '/screens/PerfilEmpresa'
         })}
       >
         <Image

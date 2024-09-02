@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nova Experiência</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+        }
+        form {
+            background: #fff;
+            padding: 10px;
+            border-radius: 10px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        h1 {
+            font-size: 40px;
+            color: #086E7C;
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: 800;
+            text-align: center;
+        }
+        input {
+            margin: 7px 0;
+            border-radius: 5px;
+            padding: 10px;
+            /* width: 90%; */
+        }
+        input[type="checkbox"] {
+            margin: 0 5px;
+        }
+        button {
+            background: #086E7C;
+            color: #ffffff;
+            width: 90%;
+            height: 50px;
+            border-radius: 10px;
+            border: none;
+            font-size: 22px;
+            font-weight: bold;
+            margin: auto;
+        }
+    </style>
+</head>
+<body>
+
+    <form action="" method="post">
+        <h1>Nova Experiência de trabalho</h1>
+        <fieldset>
+            <legend>Sobre</legend>
+            <p>
+                <label for="">Empresa</label><br>
+                <input type="text" name="" id="">
+            </p>
+            <p>
+                <label for="">Cargo</label><br>
+                <input type="text" name="" id="">
+            </p>
+            <p>
+                <label for="">Atribuições do cargo</label><br>
+                <textarea name="" id="" rows="10" cols="40"></textarea>
+            </p>
+        </fieldset>
+        <fieldset>
+            <legend>Datas</legend>
+            <p>
+                <label for="">Ano início</label><br>
+                <input type="text" name="" id="">
+            </p>
+            <p>
+                <label for="">Ano Fim</label><br>
+                <input type="text" name="" id="">
+            </p>
+            <p>
+                <input type="checkbox" name="" id="">
+                <label for="">Trabalho aqui atualmente</label>
+            </p>
+        </fieldset>
+        <button type="submit">Acrescentar</button>
+    </form>
+    
+</body>
+</html>
