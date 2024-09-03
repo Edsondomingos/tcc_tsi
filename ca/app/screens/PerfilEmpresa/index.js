@@ -15,7 +15,7 @@ export default Perfil = () => {
             try {
                 const dadosAsync = JSON.parse(await AsyncStorage.getItem('statusLogin'))
                 if (dadosAsync.length == 0 || dadosAsync === null) {
-                    // setModalSignup(true)
+                    setModalSignup(true)
                 }
                 console.log(modalSignup,dadosAsync.length)
             } catch (e) {
@@ -41,7 +41,7 @@ export default Perfil = () => {
                 :
         <View style={Style.container}>
             
-            <ScrollView>
+            <ScrollView style={{padding: 5}}>
                 <View style={Style.containerUser}>
                     <Image source={require('../../imgs/perfilBranco.png')}
                         style={Style.imgPerfil} />

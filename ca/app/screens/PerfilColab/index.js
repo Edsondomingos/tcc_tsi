@@ -4,44 +4,43 @@ import Style from './Style'
 import Menu from '../../components/Menu'
 import axios from 'axios'
 import AsyncStorage from '@react-native-async-storage/async-storage'
-import { WebView } from 'react-native-webview'
+import Webview from '../../components/Webview'
 
 export default Perfil = () => {
 
-    const [modalSignup, setModalSignup] = useState(false)
+    const [showModal, setShowModal] = useState(false)
+    const [link, setLink] = useState('https://acheitudo.online/ca/login.php')
 
     useEffect(() => {
         const statusLogin = async () => {
             try {
                 const dadosAsync = JSON.parse(await AsyncStorage.getItem('statusLogin'))
                 if (dadosAsync.length == 0 || dadosAsync === null) {
-                    setModalSignup(true)
+                    setShowModal(true)
                 }
-                console.log(modalSignup,dadosAsync.length)
+                console.log(showModal,dadosAsync.length)
             } catch (e) {
                 console.log(e)
             }
         }
 
         statusLogin()
-    }, [])
+    }, []) //Sempre ver showModal
 
-    return ( modalSignup ?
+    return ( showModal ?
 
-        <Modal
-                    visible={modalSignup} transparent={false} animationType='slide' onRequestClose={() => setModalSignup(!modalSignup)}
+                <Modal
+                    visible={showModal} transparent={false} animationType='slide' onRequestClose={() => setShowModal(!showModal)}
                 >
-                    {/* <BtnFecharModal onPress={() => setModalSignup(!modalSignup)} /> */}
-                    <View style={{ flex: 1, width: '100%', height: '100%' }}>
-                        <WebView
-                            source={{ uri: 'https://acheitudo.online/ca/login.php' }}
-                        />
-                    </View>
+                    {/* <BtnFecharModal onPress={() => setShowModal(!showModal)} /> */}
+                    {/* <View style={{ flex: 1, width: '100%', height: '100%' }}> */}
+                        <Webview link={link} />
+                    {/* </View> */}
                 </Modal>
                 :
         <View style={Style.container}>
             
-            <ScrollView>
+            <ScrollView style={{padding: 5}}>
                 <View style={Style.containerUser}>
                     <Image source={require('../../imgs/perfilBranco.png')}
                         style={Style.imgPerfil} />
@@ -64,7 +63,12 @@ export default Perfil = () => {
 
                 <View style={{marginVertical: 20}}>
                     <Text style={Style.titulos}>Formação</Text>
-                    <TouchableOpacity style={{marginVertical: 15}}>
+                    <TouchableOpacity style={{marginVertical: 15}}
+                    onPress={() => {
+                        setLink('https://acheitudo.online/ca/novaFormacao.html')
+                        setShowModal(!showModal)
+
+                        }}>
                         <View style={{display: 'flex', flexDirection: 'row'}}>
                             <Text style={{backgroundColor: '#04CEFB', color: '#fff', width: 20, borderRadius: 100, textAlign: 'center'}}>+</Text>
                             <Text style={{color: '#04CEFB'}}> Acrescentar Formação</Text>
@@ -74,7 +78,12 @@ export default Perfil = () => {
 
                 <View style={{marginVertical: 20}}>
                     <Text style={Style.titulos}>Experiência Profisional</Text>
-                    <TouchableOpacity style={{marginVertical: 15}}>
+                    <TouchableOpacity style={{marginVertical: 15}}
+                        onPress={() => {
+                        setLink('https://acheitudo.online/ca/novaExperiencia.html')
+                        setShowModal(!showModal)
+
+                        }}>
                         <View style={{display: 'flex', flexDirection: 'row'}}>
                             <Text style={{backgroundColor: '#04CEFB', color: '#fff', width: 20, borderRadius: 100, textAlign: 'center'}}>+</Text>
                             <Text style={{color: '#04CEFB'}}> Acrescentar Experiência</Text>
@@ -85,7 +94,12 @@ export default Perfil = () => {
 
                 <View style={{marginVertical: 20}}>
                     <Text style={Style.titulos}>Pitch</Text>
-                    <TouchableOpacity style={{marginVertical: 15}}>
+                    <TouchableOpacity style={{marginVertical: 15}}
+                    onPress={() => {
+                        setLink('https://acheitudo.online/ca/pitch.php')
+                        setShowModal(!showModal)
+
+                        }}>
                         <View style={{display: 'flex', flexDirection: 'row'}}>
                             <Text style={{backgroundColor: '#04CEFB', color: '#fff', width: 20, borderRadius: 100, textAlign: 'center'}}>+</Text>
                             <Text style={{color: '#04CEFB'}}> Acrescentar video</Text>

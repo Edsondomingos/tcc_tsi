@@ -1,9 +1,10 @@
 import { useState, useEffect } from 'react';
-import { View, Text, ScrollView, TouchableOpacity } from 'react-native'
+import { View, Text, ScrollView, TouchableOpacity, Modal } from 'react-native'
 import Menu from './components/Menu'
 import axios from 'axios'
 import AsyncStorage from '@react-native-async-storage/async-storage'
 import { useRouter } from 'expo-router';
+import WebView from './components/Webview';
 
 let conteudo = [
   {
@@ -50,12 +51,13 @@ export default function App() {
 
   const router = useRouter()
 
+  const [ showModal, setShowModal ]  = useState(false)
   const [vagas, setVagas] = useState(null)
 
   // useEffect(() => {
   //   const vai = async () => {
   //     await router.push({
-  //       pathname: "/screens/PerfilEmpresa",
+  //       pathname: "/screens/PerfilColab",
   //     })
   //   }
 
@@ -112,8 +114,17 @@ export default function App() {
         {vagas ?
           vagas.map((valor, index) => {
             return (
-              <TouchableOpacity key={index}
-                onPress={() => console.log()}
+              <View key={index}>
+                 <Modal
+                    visible={showModal} transparent={false} animationType='slide' onRequestClose={() => setShowModal(!showModal)}>
+                    <WebView link={'http://acheitudo.online/ca/vaga.html'} />
+                  </Modal>
+              
+              <TouchableOpacity
+                onPress={() => {
+                 setShowModal(!showModal)
+                 
+                }}
                 style={{
                   borderLeftWidth: 1, borderLeftColor: '#000', marginLeft: 20,
                   marginVertical: 10, padding: 5,
@@ -126,9 +137,10 @@ export default function App() {
                   <Text>+Salário: R${valor.salario}</Text>
                   <Text>+Descricão: {'\n' + valor.descricao}</Text>
                 </View>
-              </TouchableOpacity>
+              </TouchableOpacity></View>
             )
           })
+          
           : ""}
       </ScrollView>
       <Menu />

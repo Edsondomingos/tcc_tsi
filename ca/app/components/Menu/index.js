@@ -36,7 +36,7 @@ export default function Menu() {
       </TouchableOpacity>
       <TouchableOpacity
         onPress={() => router.push({
-          pathname: '/screens/PerfilEmpresa'
+          pathname: '/screens/PerfilColab'
         })}
       >
         <Image
